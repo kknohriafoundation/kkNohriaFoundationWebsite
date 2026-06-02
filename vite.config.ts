@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Base path for assets when deployed to GitHub Pages under
+    // https://kknohriafoundation.github.io/kkNohriaFoundationWebsite/
+    base: '/kkNohriaFoundationWebsite/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
