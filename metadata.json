@@ -1,0 +1,8 @@
+{
+  "name": "Krishan Kumar Nohria Foundation",
+  "description": "Charity foundation website supporting Educational scholarships, Medical camps, elder support, and Government documentation help.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
