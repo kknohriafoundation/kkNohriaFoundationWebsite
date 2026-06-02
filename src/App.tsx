@@ -27,7 +27,13 @@ export default function App() {
   const isAdminUser = session?.user?.user_metadata?.role === 'admin';
 
   useEffect(() => {
-    setIsAdminRoute(window.location.pathname.startsWith('/admin'));
+    // Detect admin path anywhere in the pathname so base path prefixes work
+    // (e.g. when deployed under /kkNohriaFoundationWebsite/ or served at root).
+    try {
+      setIsAdminRoute(window.location.pathname.includes('/admin'));
+    } catch (e) {
+      setIsAdminRoute(false);
+    }
   }, []);
 
   useEffect(() => {
